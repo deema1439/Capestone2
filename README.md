@@ -230,34 +230,6 @@ git clone https://github.com/<your-username>/gg-squad.git
 CREATE DATABASE gg_squad;
 ```
 
-### 2. Configure `application.properties`
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/gg_squad
-spring.datasource.username=YOUR_DB_USER
-spring.datasource.password=YOUR_DB_PASSWORD
-spring.jpa.hibernate.ddl-auto=update
-
-# Gmail (use an App Password, not your real password)
-spring.mail.host=smtp.gmail.com
-spring.mail.port=587
-spring.mail.username=YOUR_EMAIL
-spring.mail.password=YOUR_APP_PASSWORD
-spring.mail.properties.mail.smtp.auth=true
-spring.mail.properties.mail.smtp.starttls.enable=true
-
-# WhatsApp (UltraMsg)
-whatsapp.instance=YOUR_INSTANCE_ID
-whatsapp.token=YOUR_TOKEN
-
-# AI (Claude API)
-ai.api.key=YOUR_API_KEY
-```
-
-> ⚠️ Never commit real keys or passwords. Keep them out of GitHub.
-
-### 3. Run
-Run the Spring Boot application, then test the endpoints with Postman on **http://localhost:8080/api/v1**.
-
 ### 4. Suggested order for new data
 Game → Rank → Role → Player → Squad → Requests / Offers → Reviews
 
